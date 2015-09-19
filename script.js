@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  document.addEventListener('DOMContentLoaded', getNewQuote);
+  document.getElementById('new-quote-button').addEventListener('click', getNewQuote);
+  document.getElementById('twitter-button').addEventListener('click', shareTwitter);
+});
+
 var prevQuoteIndex = 0,
   randomQuotes = [{
     quote: "I want to believe that the past is done with us the moment we are done with it.",
@@ -24,10 +30,10 @@ var prevQuoteIndex = 0,
     quote: "Without the past, there would be nothing to think about, let alone someone to think it.",
     character: "Abraham"
   }, {
-    quote: "It’s not the drugs that make a drug addict, it’s the need to escape reality.",
+    quote: "It's not the drugs that make a drug addict, it's the need to escape reality.",
     character: "Riley Blue"
   }, {
-    quote: "I’m one of those people who’s comfortable with the idea that there’s more going on in this world that we don’t understand than all the things that we do.",
+    quote: "I'm one of those people who's comfortable with the idea that there's more going on in this world that we don't understand than all the things that we do.",
     character: "Grace"
   }, {
     quote: "In this country, sometimes the only place you can find a brave and honest woman is in prison.",
@@ -42,7 +48,7 @@ var prevQuoteIndex = 0,
     quote: "This is what life is: fear, rage, desire...love. To stop feeling emotions, to stop wanting to feel them, is to feel...death.",
     character: "Sun Bak"
   }, {
-    quote: "The real violence, the violence I realized was unforgivable, is the violence that we do to ourselves, when we’re too afraid to be who we really are.",
+    quote: "The real violence, the violence I realized was unforgivable, is the violence that we do to ourselves, when we're too afraid to be who we really are.",
     character: "Nomi Marks"
   }, {
     quote: "Our existence depends on sheer implausibility.",
@@ -60,7 +66,7 @@ var prevQuoteIndex = 0,
     quote: "The bed keeps you in the slum. The flat screen takes you out.",
     character: "Capheus 'Van Damme'"
   }, {
-    quote: "For a long time, I was afraid to be who I am because I was taught by my parents that there’s something wrong with someone like me. Something offensive, something you would avoid, maybe even pity. Something that you could never love. I was afraid of this parade because I wanted so badly to be a part of it. So today, I’m marching for that part of me that was once too afraid to march. And for all the people who can’t march… the people living lives like I did. Today, I march to remember that I’m not just a me. I’m also a we. And we march with pride.",
+    quote: "For a long time, I was afraid to be who I am because I was taught by my parents that there's something wrong with someone like me. Something offensive, something you would avoid, maybe even pity. Something that you could never love. I was afraid of this parade because I wanted so badly to be a part of it. So today, I'm marching for that part of me that was once too afraid to march. And for all the people who can't march... the people living lives like I did. Today, I march to remember that I'm not just a me. I'm also a we. And we march with pride.",
     character: "Nomi Marks"
   }, {
     quote: "Sometimes...you make a mistake. You've got two choices: you live with it, or you fix it.",
@@ -117,7 +123,3 @@ function shareTwitter() {
     window.open(tweetLink, '_blank');
   }
 }
-
-document.addEventListener('DOMContentLoaded', getNewQuote);
-document.getElementById('new-quote-button').addEventListener('click', getNewQuote);
-document.getElementById('twitter-button').addEventListener('click', shareTwitter);
